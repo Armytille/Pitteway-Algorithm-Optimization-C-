@@ -1,0 +1,14 @@
+La fonction pittest (pittest.c) calcule un segment de droite en utilisant une implémentation de l'algorithme de Pitteway. 
+
+Sans utiliser l'optimiseur, la fonction pittest est environ 6 fois plus rapide que la fonction de référence droite_br (pittest.c) utilisant l'algorithme de Bresenham.
+
+En utilisant le flag -O3 à la compilation, la fonction pittest devient 4 fois plus rapide que précédemment.
+
+En mémoire, elle consomme plus que droite_br mais l'une comme l'autre utilisent la même quantité de mémoire quels que soient leur arguments. C'est donc assez négligeable.
+
+La fonction pittest calcule le segment de droite en entier puis fait appel une fonction d'affichage, tandis que droite_br fait appel à une fonction d'affichage à chaque itération du calcul de la droite.
+
+En contrepartie, pittest doit stocker et manipuler de très très grands nombres (tant bien que mal à l'aide d'un tableau) tandis que droite_br ne garde en mémoire que des coordonnées de point.
+
+
+
